@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://dw5vbkkl27nm7"]
+
+[ext_resource type="Script" uid="uid://daew7i8r4826i" path="res://imports/sword/sword_2d.gd" id="1_umlkf"]
+[ext_resource type="Texture2D" uid="uid://dqkrolth8svqr" path="res://player/inventário/ItemTypes/Pa/tile_0128.png" id="2_htc1r"]
+[ext_resource type="Script" uid="uid://ctqytef6t6cmw" path="res://imports/nodes/hit_area_2d.gd" id="3_obk0l"]
+
+[sub_resource type="Animation" id="Animation_htc1r"]
+resource_name = "Default"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArmaWrapper/Sprite2D:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(0.43527535, 1.2, 9.18959),
+"update": 0,
+"values": [0.0, 7.330383, 6.2831855]
+}
+
+[sub_resource type="Animation" id="4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArmaWrapper/HitArea2D/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArmaWrapper:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArmaWrapper/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="3"]
+resource_name = "slash"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArmaWrapper/HitArea2D/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 0.21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArmaWrapper:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25),
+"transitions": PackedFloat32Array(1.1, 1.1, 1.1),
+"update": 0,
+"values": [-0.5235988, 2.0943952, 1.8325957]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_35l3r"]
+_data = {
+&"Default": SubResource("Animation_htc1r"),
+&"RESET": SubResource("4"),
+&"slash": SubResource("3")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ukox"]
+radius = 16.888887
+height = 38.40052
+
+[node name="Pa2D" type="Node2D" unique_id=1548205427]
+script = ExtResource("1_umlkf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1905464244]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_35l3r")
+
+[node name="ArmaWrapper" type="Node2D" parent="." unique_id=2104828968]
+
+[node name="Sprite2D" type="Sprite2D" parent="ArmaWrapper" unique_id=283680948]
+texture_filter = 1
+position = Vector2(96, 0)
+scale = Vector2(5.0000186, 5.0000205)
+texture = ExtResource("2_htc1r")
+
+[node name="HitArea2D" type="Area2D" parent="ArmaWrapper" unique_id=1598398558]
+position = Vector2(325.00125, 0)
+rotation = 1.5707964
+scale = Vector2(5.00002, 5.0000186)
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_obk0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArmaWrapper/HitArea2D" unique_id=57322843]
+position = Vector2(1.7921715e-06, 41.000095)
+shape = SubResource("CapsuleShape2D_7ukox")
+disabled = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

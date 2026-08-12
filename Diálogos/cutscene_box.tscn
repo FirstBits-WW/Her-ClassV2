@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bfskk4gkvfroy"]
+
+[ext_resource type="Script" uid="uid://47xqnogx56om" path="res://Diálogos/cutscene_box.gd" id="1_87ntq"]
+[ext_resource type="Resource" uid="uid://di2gofjl6iq0" path="res://Diálogos/primeiro diálogo.dialogue" id="2_u6ofc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yliuv"]
+radius = 128.0
+
+[node name="CutsceneBox" type="Area2D" unique_id=420082910]
+collision_mask = 2
+script = ExtResource("1_87ntq")
+OwnDialogue = ExtResource("2_u6ofc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2002158272]
+shape = SubResource("CircleShape2D_yliuv")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
