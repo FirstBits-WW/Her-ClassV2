@@ -1,13 +1,71 @@
 [gd_resource type="Theme" format=3 uid="uid://d3kwp2qjglybs"]
 
-[ext_resource type="FontFile" uid="uid://5a6p1u65oh7f" path="res://resources/fonts/Kenney Pixel.ttf" id="1_g82ud"]
+[ext_resource type="FontFile" uid="uid://ba6xsn2ecin4g" path="res://resources/fonts/Kenney Pixel Square.ttf" id="1_da787"]
 [ext_resource type="FontFile" uid="uid://cxncyvfy6lysk" path="res://resources/fonts/Kenney Blocks.ttf" id="2_wy8ng"]
 [ext_resource type="Texture2D" uid="uid://cmds6364mtv0l" path="res://resources/ui_elements/Grey/Double/button_square_depth_gradient.png" id="3_2tktg"]
 [ext_resource type="Texture2D" uid="uid://ce4fyecc02y4o" path="res://resources/ui_elements/Grey/Double/button_square_gradient.png" id="4_2tktg"]
 [ext_resource type="Texture2D" uid="uid://dpksllq32v14s" path="res://resources/ui_elements/Red/Double/button_square_depth_gradient.png" id="5_2tktg"]
 [ext_resource type="Texture2D" uid="uid://rbk5grn8xyuv" path="res://resources/ui_elements/Red/Double/button_square_gradient.png" id="7_2tktg"]
+[ext_resource type="FontFile" uid="uid://5a6p1u65oh7f" path="res://resources/fonts/Kenney Pixel.ttf" id="7_m2x7j"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rtxy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f31q"]
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+expand_margin_left = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u1x2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+expand_margin_left = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2x7j"]
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egrwv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0.39607844)
+border_width_left = 4
+border_width_top = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+expand_margin_left = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wv8md"]
+bg_color = Color(0.698039, 0.133333, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da787"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -23,7 +81,7 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hofdy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tktg"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -43,6 +101,19 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2x7j"]
+load_path = "res://.godot/imported/button_square_depth_gradient.png-f82fcaa060c74fc4846acf124e1ed65a.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgrho"]
+content_margin_left = 16.0
+texture = SubResource("CompressedTexture2D_m2x7j")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 20.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdjj3"]
 content_margin_left = 16.0
 texture = ExtResource("3_2tktg")
@@ -61,9 +132,6 @@ texture_margin_right = 12.0
 texture_margin_bottom = 12.3373
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wv8md"]
-bg_color = Color(0.698039, 0.133333, 0.203922, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1fdf"]
 bg_color = Color(0.973535, 0.973535, 0.973535, 1)
@@ -508,14 +576,14 @@ corner_radius_bottom_left = 4
 
 [resource]
 BoldLabel/base_type = &"Label"
-BoldLabel/fonts/font = ExtResource("1_g82ud")
-Button/colors/font_color = Color(0.16565639, 0.16565642, 0.16565639, 1)
+BoldLabel/fonts/font = ExtResource("1_da787")
+Button/colors/font_color = Color(0.84747523, 0.8474743, 0.84747446, 1)
 Button/colors/font_disabled_color = Color(0.698039, 0.133333, 0.203922, 1)
-Button/colors/font_focus_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
 Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 Button/colors/icon_focus_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_color = Color(1, 1, 1, 1)
@@ -528,16 +596,21 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("2_wy8ng")
-Button/styles/disabled = SubResource("StyleBoxFlat_7rtxy")
-Button/styles/focus = SubResource("StyleBoxFlat_hofdy")
-Button/styles/hover = SubResource("StyleBoxTexture_pdjj3")
-Button/styles/normal = SubResource("StyleBoxTexture_pdjj3")
-Button/styles/pressed = SubResource("StyleBoxTexture_m2x7j")
+Button/styles/focus = SubResource("StyleBoxFlat_4f31q")
+Button/styles/hover = SubResource("StyleBoxFlat_4u1x2")
+Button/styles/normal = SubResource("StyleBoxFlat_m2x7j")
+Button/styles/pressed = SubResource("StyleBoxFlat_egrwv")
 DisabledLabel/base_type = &"Label"
 DisabledLabel/colors/font_color = Color(0, 0, 0, 1)
 DisabledLabel/font_sizes/font_size = 24
 DisabledLabel/fonts/font = null
 DisabledLabel/styles/normal = SubResource("StyleBoxFlat_wv8md")
+FancyButton/base_type = &"Button"
+FancyButton/styles/disabled = SubResource("StyleBoxFlat_da787")
+FancyButton/styles/focus = SubResource("StyleBoxFlat_2tktg")
+FancyButton/styles/hover = SubResource("StyleBoxTexture_bgrho")
+FancyButton/styles/normal = SubResource("StyleBoxTexture_pdjj3")
+FancyButton/styles/pressed = SubResource("StyleBoxTexture_m2x7j")
 HScrollBar/styles/grabber = SubResource("StyleBoxFlat_s1fdf")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_tieq2")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_rrxf3")
@@ -565,10 +638,10 @@ ProgressBarDelayHovered/styles/fill = SubResource("StyleBoxFlat_c4ulf")
 ProgressBarGood/base_type = &"ProgressBar"
 ProgressBarGood/styles/fill = SubResource("StyleBoxFlat_8723n")
 RedButton/base_type = &"Button"
-RedButton/colors/font_color = Color(1, 1, 1, 1)
-RedButton/colors/font_focus_color = Color(0.85882354, 0.85882354, 0.85882354, 1)
-RedButton/colors/font_hover_color = Color(0.86036915, 0.8603692, 0.8603692, 1)
-RedButton/colors/font_pressed_color = Color(0.85882354, 0.85882354, 0.85882354, 1)
+RedButton/colors/font_color = Color(1, 0.8039216, 0.8039216, 1)
+RedButton/colors/font_focus_color = Color(1, 1, 1, 1)
+RedButton/colors/font_hover_color = Color(1, 1, 1, 1)
+RedButton/colors/font_pressed_color = Color(1, 1, 1, 1)
 RedButton/styles/disabled = SubResource("StyleBoxFlat_bgrho")
 RedButton/styles/focus = SubResource("StyleBoxFlat_pd0to")
 RedButton/styles/hover = SubResource("StyleBoxTexture_da787")
@@ -592,6 +665,8 @@ TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_d8x3d")
 TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_4bfjk")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_ojvr3")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_lop2v")
+TooltipLabel/font_sizes/font_size = 32
+TooltipLabel/fonts/font = ExtResource("7_m2x7j")
 Tree/colors/children_hl_line_color = Color(0.0392157, 0.0392157, 0.0392157, 1)
 Tree/colors/font_color = Color(0.973535, 0.973535, 0.973535, 1)
 Tree/colors/font_disabled_color = Color(0.698039, 0.133333, 0.203922, 1)

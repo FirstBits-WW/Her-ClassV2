@@ -22,7 +22,6 @@ text = "Cancel"
 [node name="ConfirmButton" type="Button" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1" unique_id=1683395510]
 unique_name_in_owner = true
 layout_mode = 2
-theme_type_variation = &"RedButton"
 text = "Confirm"
 
 [connection signal="pressed" from="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/ConfirmButton" to="." method="_on_confirm_button_pressed"]

@@ -23,7 +23,7 @@ func _physics_process(_delta: float) -> void:
 		return
 	var direction := Vector2.ZERO
 	if is_active:
-		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	if direction:
 		velocity = direction * speed
@@ -66,7 +66,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		equipar_item(2)
 	elif event.keycode == KEY_R:
 		equipar_item(3)
-	elif event.keycode == KEY_F:
+	elif event.is_action_pressed("interact"):
 		coletar_items()
 	elif event.keycode == KEY_G:
 		dropar_items()

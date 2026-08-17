@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://cygs0qeabr5u6" path="res://scenes/menus/main_menu/main_menu.gd" id="2_ub2bi"]
 [ext_resource type="PackedScene" uid="uid://b8doiervc4q6d" path="res://scenes/windows/main_menu_options_window.tscn" id="3_x31ro"]
 [ext_resource type="PackedScene" uid="uid://bu5rg6scbsyqs" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_0jpat"]
+[ext_resource type="Texture2D" uid="uid://bv6ik6hbosdl7" path="res://resources/textures/Space Background (1).png" id="5_x31ro"]
+[ext_resource type="Texture2D" uid="uid://bc0v1uw0hqht2" path="res://resources/textures/1934214639.png" id="6_0jpat"]
 
 [node name="MainMenu" unique_id=170048243 instance=ExtResource("1_peecx")]
 script = ExtResource("2_ub2bi")
@@ -11,8 +13,51 @@ game_scene_path = "res://scenes/game/game.tscn"
 options_packed_scene = ExtResource("3_x31ro")
 credits_packed_scene = ExtResource("4_0jpat")
 
-[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" parent_id_path=PackedInt32Array(704939549) index="0" unique_id=334107926]
-text = "HerClass (new base)"
+[node name="SpaceBackGroundTex" type="TextureRect" parent="." index="0" unique_id=1504002357]
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 1281.0
+texture = ExtResource("5_x31ro")
 
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" parent_id_path=PackedInt32Array(1691719897) index="3" unique_id=1226331361]
+[node name="MoonTex" type="TextureRect" parent="." index="1" unique_id=1963120206]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 200.0
+offset_right = 1100.0
+offset_bottom = 600.0
+texture = ExtResource("6_0jpat")
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" parent_id_path=PackedInt32Array(704939549) index="0" unique_id=334107926]
+theme_type_variation = &"BoldLabel"
+text = "object_class"
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" parent_id_path=PackedInt32Array(523889664) index="0" unique_id=754291424]
+text = ""
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(580041505) index="0" unique_id=1691719897]
+offset_left = -598.0
+offset_top = -208.0
+offset_right = -331.0
+offset_bottom = 100.0
+
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
+visible = false
 theme_type_variation = &"RedButton"
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" parent_id_path=PackedInt32Array(645412385) index="0" unique_id=321873498]
+offset_left = -419.0
+offset_top = -41.0
+offset_right = -297.0
+offset_bottom = -15.0
+
+[node name="ExitButton2" type="Button" parent="." index="6" unique_id=1580466584]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 994.0
+offset_top = 624.0
+offset_right = 1261.0
+offset_bottom = 705.0
+theme_type_variation = &"RedButton"
+text = "Exit"
+
+[connection signal="pressed" from="ExitButton2" to="." method="_on_exit_button_pressed"]
