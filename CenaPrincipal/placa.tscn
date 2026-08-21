@@ -5,16 +5,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_pt8my"]
 radius = 112.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i43bl"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.7137255)
-corner_radius_top_left = 4
-corner_radius_bottom_right = 4
-corner_detail = 1
-
 [node name="Placa" type="Area2D" unique_id=935575288]
 collision_layer = 0
 collision_mask = 2
@@ -24,19 +14,48 @@ script = ExtResource("1_i43bl")
 shape = SubResource("CircleShape2D_pt8my")
 
 [node name="Label" type="Label" parent="." unique_id=1779720847]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.0
-offset_top = -96.0
-offset_right = 59.0
-offset_bottom = -65.0
+offset_left = -110.0
+offset_top = -123.5
+offset_right = 110.0
+offset_bottom = -37.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_i43bl")
-text = "Texto de teste"
+theme_type_variation = &"DroneLabel"
+text = "Você pode alterar
+o botão de interação
+nas configurações!"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=957581596]
+custom_minimum_size = Vector2(240, 61)
+clip_contents = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -123.5
+offset_right = 120.0
+offset_bottom = -62.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_filter = 2
+theme_type_variation = &"RichDroneLabel"
+bbcode_enabled = true
+text = "Você pode alterar
+o botão de interação
+nas configurações!"
+fit_content = true
+scroll_active = false
 horizontal_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

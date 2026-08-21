@@ -64,7 +64,16 @@ func switch_character(new_index: int) -> void:
 	# Avisa a câmera para seguir o novo alvo
 	camera.set_target(players[current_player_index])
 	
-
+func switch_character_cutscene(name_target: String):
+	print("switch de personagem na cutscene!")
+	for i in players.size():
+		if players[i].nome == name_target:
+			players[current_player_index].set_active(false)
+			current_player_index = i
+			players[current_player_index].set_active(true)
+			camera.set_target(players[current_player_index])
+			
+			
 
 func _on_button_pressed() -> void:
 	var newplayer: PlayerCharacter = player_scene.instantiate()
@@ -72,5 +81,19 @@ func _on_button_pressed() -> void:
 	newplayer.set_active(false)
 	add_child(newplayer)
 	players.append(newplayer)
+	
+func pegar_nome_do_botao(nome_da_acao: String) -> String:
+	
+	var eventos = InputMap.action_get_events(nome_da_acao)
+	
+
+	if eventos.is_empty():
+		return "Nenhum botão"
+		
+
+	var primeiro_evento = eventos[0]
+	
+
+	return "[" + primeiro_evento.as_text() + "] "
 	
 	

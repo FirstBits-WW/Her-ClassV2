@@ -65,6 +65,26 @@ expand_margin_left = 8.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wv8md"]
 bg_color = Color(0.698039, 0.133333, 0.203922, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i43bl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0.5921569, 0.83137256, 0.57254905)
+skew = Vector2(0.1, 0)
+border_width_left = 5
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_bottom_right = 6
+corner_detail = 1
+expand_margin_left = 10.0
+expand_margin_top = 4.0
+expand_margin_right = 10.0
+expand_margin_bottom = 4.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da787"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -605,6 +625,10 @@ DisabledLabel/colors/font_color = Color(0, 0, 0, 1)
 DisabledLabel/font_sizes/font_size = 24
 DisabledLabel/fonts/font = null
 DisabledLabel/styles/normal = SubResource("StyleBoxFlat_wv8md")
+DroneLabel/base_type = &"Label"
+DroneLabel/constants/outline_size = 4
+DroneLabel/fonts/font = ExtResource("1_da787")
+DroneLabel/styles/normal = SubResource("StyleBoxFlat_i43bl")
 FancyButton/base_type = &"Button"
 FancyButton/styles/disabled = SubResource("StyleBoxFlat_da787")
 FancyButton/styles/focus = SubResource("StyleBoxFlat_2tktg")
@@ -647,6 +671,10 @@ RedButton/styles/focus = SubResource("StyleBoxFlat_pd0to")
 RedButton/styles/hover = SubResource("StyleBoxTexture_da787")
 RedButton/styles/normal = SubResource("StyleBoxTexture_oc7rp")
 RedButton/styles/pressed = SubResource("StyleBoxTexture_2tktg")
+RichDroneLabel/base_type = &"RichTextLabel"
+RichDroneLabel/constants/outline_size = 4
+RichDroneLabel/fonts/normal_font = ExtResource("1_da787")
+RichDroneLabel/styles/normal = SubResource("StyleBoxFlat_i43bl")
 RichTextLabel/fonts/bold_font = null
 RichTextLabel/fonts/bold_italics_font = null
 RichTextLabel/fonts/italics_font = null

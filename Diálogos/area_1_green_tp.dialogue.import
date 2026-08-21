@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2whsj0a786hk"
+path="res://.godot/imported/area_1_green_tp.dialogue-122b57bed66f92aa8bc07f15dd1a166b.tres"
+
+[deps]
+
+source_file="res://Diálogos/area_1_green_tp.dialogue"
+dest_files=["res://.godot/imported/area_1_green_tp.dialogue-122b57bed66f92aa8bc07f15dd1a166b.tres"]
+
+[params]
+
+defaults=true

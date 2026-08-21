@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d3d6atkneco3x"]
+
+[ext_resource type="PackedScene" uid="uid://dec3ogf3hpu3b" path="res://player/player.tscn" id="1_82whx"]
+
+[node name="Player" unique_id=800378027 instance=ExtResource("1_82whx")]
+nome = "Blue"

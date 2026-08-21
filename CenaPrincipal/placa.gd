@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var texto = $Label
+@onready var texto: RichTextLabel = $RichTextLabel
 var animacao_fade: Tween 
 
 func _ready() -> void:
@@ -16,8 +16,10 @@ func _on_body_entered(body: Node2D) -> void:
 
 		animacao_fade = create_tween()
 		
+		animacao_fade.set_ease(Tween.EASE_IN_OUT)
 
 		animacao_fade.tween_property(texto, "modulate:a", 1.0, 0.3)
+
 
 
 func _on_body_exited(body: Node2D) -> void:
@@ -28,4 +30,7 @@ func _on_body_exited(body: Node2D) -> void:
 			
 		animacao_fade = create_tween()
 		
+		animacao_fade.set_ease(Tween.EASE_IN_OUT)
+
 		animacao_fade.tween_property(texto, "modulate:a", 0.0, 0.3)
+		

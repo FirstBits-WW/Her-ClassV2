@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dhi45u3gs1sea"
+path="res://.godot/imported/area_1_blue_tp.dialogue-67d0235e4c83d3d06d051a5109d3e9dc.tres"
+
+[deps]
+
+source_file="res://Diálogos/area_1_blue_tp.dialogue"
+dest_files=["res://.godot/imported/area_1_blue_tp.dialogue-67d0235e4c83d3d06d051a5109d3e9dc.tres"]
+
+[params]
+
+defaults=true

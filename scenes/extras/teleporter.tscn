@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://brjxh11p5twok"]
+
+[ext_resource type="Script" uid="uid://dj62nnvr11dxl" path="res://novosscripts/DMPlayerInstatiator.gd" id="1_uqmp4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqmp4"]
+radius = 128.0
+
+[node name="Teleporter" type="Area2D" unique_id=1750721007]
+script = ExtResource("1_uqmp4")
+metadata/_custom_type_script = "uid://dj62nnvr11dxl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242782307]
+shape = SubResource("CircleShape2D_uqmp4")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c3jio1ahotrnj"]
+
+[ext_resource type="Texture2D" uid="uid://dvw118jnro1uy" path="res://resources/ui_elements/Blue/Double/arrow_decorative_e_small.png" id="1_1660x"]
+[ext_resource type="Script" uid="uid://b1deismhajj1w" path="res://scenes/entidades/drone.gd" id="2_tslkm"]
+[ext_resource type="PackedScene" uid="uid://rpnso8ea6ama" path="res://CenaPrincipal/placa.tscn" id="3_4gjyc"]
+
+[node name="Drone" type="Node2D" unique_id=710012188]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1512208623]
+texture = ExtResource("1_1660x")
+script = ExtResource("2_tslkm")
+
+[node name="Placa" parent="Sprite2D" unique_id=935575288 instance=ExtResource("3_4gjyc")]

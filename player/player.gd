@@ -7,6 +7,7 @@ class_name PlayerCharacter
 @export var itens_iniciais: Array[ItemData] = [null, null, null, null]
 @onready var Hand := $Hand
 @onready var area_coleta := $AreaColeta
+@export var nome: String
 var item_atualmente_equipado: int = 99
 
 
@@ -67,12 +68,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	elif event.keycode == KEY_R:
 		equipar_item(3)
 	elif event.is_action_pressed("interact"):
-		coletar_items()
+		if coletar_items() == false:
+			dialogar()
+		
 	elif event.keycode == KEY_G:
 		dropar_items()
-	elif event.keycode == KEY_J:
 		
-		dialogar()
 
 		
 		
@@ -100,7 +101,7 @@ func equipar_item(slot_index: int) -> void:
 	else:
 		print("Slot vazio!")
 
-func coletar_items() -> void:
+func coletar_items() -> bool:
 	var areas_proximas: Array[Area2D] = area_coleta.get_overlapping_areas()
 	for area in areas_proximas:
 		
@@ -109,9 +110,10 @@ func coletar_items() -> void:
 			if meu_inventario.adicionar_item_novo(area.itemdata):
 				print("Coletou: ", area.itemdata.ItemName)
 				area.queue_free() 
-				return 
+				return true
 				
 	print("Nenhum item por perto ou inventário cheio.")
+	return false
 func dropar_items() -> void:
 	if item_atualmente_equipado == 99:
 		print("nemhum item equipado!")

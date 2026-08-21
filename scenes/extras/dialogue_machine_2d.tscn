@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b1ae10c5ohjnb"]
+
+[ext_resource type="Script" uid="uid://bvwjj0oootify" path="res://novosscripts/DialogueMachineArea.gd" id="1_pfrj8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxoqq"]
+radius = 128.0
+
+[node name="DialogueMachine2D" type="Area2D" unique_id=946857857]
+script = ExtResource("1_pfrj8")
+MAX_INTERACTION_COUNT = null
+metadata/_custom_type_script = "uid://bvwjj0oootify"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168440451]
+shape = SubResource("CircleShape2D_mxoqq")

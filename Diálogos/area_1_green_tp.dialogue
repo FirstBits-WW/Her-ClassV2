@@ -1,0 +1,9 @@
+~ start
+do switch_character_cutscene("Green")
+Green: Estou atrasada.
+do switch_character_cutscene("Red")
+Red: Você.. Você sabe?
+do switch_character_cutscene("Green")
+Green: Sim, eu estou elegantemente atrasada.
+do switch_character_cutscene("Red")
+Red: [wave amp=50 freq=2](Argh)[/wave]

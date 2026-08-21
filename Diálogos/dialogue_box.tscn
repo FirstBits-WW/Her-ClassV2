@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://23hc44qeewfl" path="res://dialogue_box.gd" id="1_x4n4j"]
 [ext_resource type="Resource" uid="uid://di2gofjl6iq0" path="res://Diálogos/primeiro diálogo.dialogue" id="2_x4n4j"]
+[ext_resource type="PackedScene" uid="uid://rpnso8ea6ama" path="res://CenaPrincipal/placa.tscn" id="3_2gwng"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yliuv"]
 radius = 128.0
@@ -13,3 +14,11 @@ OwnDialogue = ExtResource("2_x4n4j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2002158272]
 shape = SubResource("CircleShape2D_yliuv")
+
+[node name="Placa" parent="." unique_id=935575288 instance=ExtResource("3_2gwng")]
+
+[node name="Label" parent="Placa" index="1" unique_id=1779720847]
+text = "Aperte interagir!
+"
+
+[editable path="Placa"]
