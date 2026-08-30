@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://v5rhp730wuup"]
 
 [ext_resource type="PackedScene" uid="uid://dec3ogf3hpu3b" path="res://player/player.tscn" id="1_6rkxq"]
+[ext_resource type="Texture2D" uid="uid://d3qmu51f2mthd" path="res://assets/world_players_sprites/spr_player_red.png" id="2_k8kxu"]
 
 [node name="Player" unique_id=800378027 instance=ExtResource("1_6rkxq")]
 nome = "Red"
+
+[node name="Sprite2D" parent="." index="1" unique_id=2128878290]
+texture = ExtResource("2_k8kxu")

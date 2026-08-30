@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cxv5uo1tox4ga"
+path="res://.godot/imported/ester_egg.dialogue-22b47eb4d204c283cc81278534341e33.tres"
+
+[deps]
+
+source_file="res://Diálogos/ester_egg.dialogue"
+dest_files=["res://.godot/imported/ester_egg.dialogue-22b47eb4d204c283cc81278534341e33.tres"]
+
+[params]
+
+defaults=true

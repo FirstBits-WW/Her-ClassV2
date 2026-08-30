@@ -5,6 +5,7 @@ class_name DialogueArea2D
 @export var MAX_INTERACTION_COUNT: int = 0
 var CurrentInteractions: int = 0
 @export var Placa: Area2D
+@export var game_manager: GameManager
 
 
 

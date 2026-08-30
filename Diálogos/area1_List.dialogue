@@ -1,0 +1,5 @@
+~ start
+do switch_to_camera_man()
+Sistema de IA: 3 astronautas detectados na plataforma. Movam-se para a área designada.
+do switch_from_camera_man()
+Sistema de IA: Utilze [color=yellow] {{pegar_nome_do_botao("mudar_personagem")}} [/color] para alterar o alvo do sistema de câmera. 

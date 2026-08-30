@@ -1,7 +1,7 @@
 ~ start
 do switch_character_cutscene("Blue")
-Blue: [shake rate=20 level=10]AI![/shake] Porque você fez isso?
+Blue: [#Neutro] [shake rate=20 level=10]AI![/shake] Porque você fez isso?
 do switch_character_cutscene("Red")
-Red: Porque você está atrasado?
+Red: [#Neutro] Porque você está atrasado?
 do switch_character_cutscene("Blue")
-Blue: OH... hehe. sry.
+Blue: [#Neutro] OH... hehe. sry.

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvpdwgoody5ep"
+path="res://.godot/imported/area1_forcefield_down.dialogue-dc3254470e1d69e3c9cb61b436e6496e.tres"
+
+[deps]
+
+source_file="res://Diálogos/area1_forcefield_down.dialogue"
+dest_files=["res://.godot/imported/area1_forcefield_down.dialogue-dc3254470e1d69e3c9cb61b436e6496e.tres"]
+
+[params]
+
+defaults=true

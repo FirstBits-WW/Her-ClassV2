@@ -59,7 +59,10 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="DescriptionLabel" type="RichTextLabel" parent="ContentContainer/BoxContainer/BodyMargin" unique_id=369403681]
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentContainer/BoxContainer/BodyMargin" unique_id=1110832264]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer" unique_id=369403681]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true

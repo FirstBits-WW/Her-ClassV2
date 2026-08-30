@@ -16,6 +16,7 @@ OwnDialogue = ExtResource("2_x4n4j")
 shape = SubResource("CircleShape2D_yliuv")
 
 [node name="Placa" parent="." unique_id=935575288 instance=ExtResource("3_2gwng")]
+visible = false
 
 [node name="Label" parent="Placa" index="1" unique_id=1779720847]
 text = "Aperte interagir!

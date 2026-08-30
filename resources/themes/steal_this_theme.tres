@@ -504,6 +504,19 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llrxt"]
+bg_color = Color(0.051970966, 0.05197096, 0.05197095, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0ggg"]
 bg_color = Color(0.973535, 0.973535, 0.973535, 1)
 corner_radius_top_left = 2
@@ -713,6 +726,8 @@ Tree/styles/hovered = SubResource("StyleBoxFlat_bcw1c")
 Tree/styles/panel = SubResource("StyleBoxFlat_xi1kj")
 Tree/styles/selected = SubResource("StyleBoxFlat_rrcvo")
 Tree/styles/selected_focus = SubResource("StyleBoxFlat_wvge0")
+TutorialPanel/base_type = &"PanelContainer"
+TutorialPanel/styles/panel = SubResource("StyleBoxFlat_llrxt")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_v0ggg")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_kvvmu")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_rum38")

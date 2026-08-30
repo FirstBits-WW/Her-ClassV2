@@ -52,8 +52,7 @@ mouse_filter = 2
 theme_type_variation = &"RichDroneLabel"
 bbcode_enabled = true
 text = "Você pode alterar
-o botão de interação
-nas configurações!"
+os botões no menu de configurações!"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1

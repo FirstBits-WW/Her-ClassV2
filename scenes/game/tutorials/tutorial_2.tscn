@@ -12,5 +12,5 @@ text = "Pressing Escape will open the Pause Menu."
 theme_override_font_sizes/font_size = 20
 text = "Tutorial"
 
-[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" parent_id_path=PackedInt32Array(1009835268) index="0" unique_id=369403681]
+[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer" parent_id_path=PackedInt32Array(1110832264) index="0" unique_id=369403681]
 text = "Pressing Escape will open the Pause Menu."

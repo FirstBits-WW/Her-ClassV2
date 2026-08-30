@@ -3,6 +3,7 @@ class_name GameManager
 
 @export var camera: Node2D
 @export var players: Array[PlayerCharacter] # Arraste os 3 personagens para este array no Inspetor
+@export var camera_man: Node2D
 static var is_dialogue_running: bool = false
 const player_scene: PackedScene = preload("res://player/player.tscn")
 var current_player_index: int = 0
@@ -72,8 +73,13 @@ func switch_character_cutscene(name_target: String):
 			current_player_index = i
 			players[current_player_index].set_active(true)
 			camera.set_target(players[current_player_index])
-			
-			
+
+func switch_to_camera_man():
+	camera.set_target(camera_man)
+func switch_from_camera_man():
+	camera.set_target(players[current_player_index])
+func set_camera_man_position(newposition: Vector2):
+	camera_man.position = newposition
 
 func _on_button_pressed() -> void:
 	var newplayer: PlayerCharacter = player_scene.instantiate()
@@ -83,17 +89,11 @@ func _on_button_pressed() -> void:
 	players.append(newplayer)
 	
 func pegar_nome_do_botao(nome_da_acao: String) -> String:
-	
 	var eventos = InputMap.action_get_events(nome_da_acao)
-	
-
 	if eventos.is_empty():
 		return "Nenhum botão"
-		
-
 	var primeiro_evento = eventos[0]
 	
-
 	return "[" + primeiro_evento.as_text() + "] "
 	
 	
