@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cpyt4jpe24ldw"]
+
+[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_iq3jb"]
+[ext_resource type="Texture2D" uid="uid://jdntdnse05uu" path="res://resources/textures/Tutorial BackGround (2).png" id="2_11dh7"]
+[ext_resource type="Texture2D" uid="uid://cflu0tbcmv66c" path="res://assets/tutorial_sprites/level_1_segundotutorial.png" id="3_iq3jb"]
+
+[node name="OverlaidWindow" unique_id=1876550858 instance=ExtResource("1_iq3jb")]
+custom_minimum_size = Vector2(746, 402)
+offset_left = -209.99866
+offset_top = -229.0
+offset_right = 536.0
+offset_bottom = 162.50012
+theme_type_variation = &"TutorialPanel"
+exclusive_background_color = Color(0, 0, 0, 0.5019608)
+update_content = true
+title = "HERANÇA"
+close_button_text = "Fechar"
+
+[node name="TextureRect" type="TextureRect" parent="." index="0" unique_id=1929057763]
+layout_mode = 2
+texture = ExtResource("2_11dh7")
+expand_mode = 1
+
+[node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(91647963) index="0" unique_id=1128241240]
+theme_type_variation = &"TutorialTitleLabel"
+theme_override_font_sizes/font_size = 48
+text = "HERANÇA"
+
+[node name="HSeparator" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(91647963) index="1" unique_id=1241464319]
+visible = false
+
+[node name="VBoxContainer" parent="ContentContainer/BoxContainer/BodyMargin" parent_id_path=PackedInt32Array(1009835268) index="0" unique_id=1110832264]
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer" index="0" unique_id=1759642242]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer/HBoxContainer" index="0" unique_id=163746908]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_iq3jb")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer/HBoxContainer" index="1" unique_id=508007122]
+custom_minimum_size = Vector2(390, 0)
+layout_mode = 2
+theme_type_variation = &"TutorialDescription"
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=red]\"Herança\"[/color] é o ato de criar uma [color=red]classe[/color] usando como [color=purple]base[/color] outra [color=red]classe[/color], \"Herdando\" seus atribútos e métodos, mas mantendo sua identidade. Ou seja, um [color=50C878]\"especialista\"[/color] que herda de \"astronauta\" [color=red]é um[/color] \"astronauta\"."
+
+[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer" index="1" unique_id=369403681]
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_type_variation = &"TutorialDescription"
+theme_override_font_sizes/normal_font_size = 20
+vertical_alignment = 2
+
+[node name="CloseButton" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(1139131565) index="0" unique_id=283447605]
+theme_type_variation = &"TutorialButton"
+text = "Fechar"

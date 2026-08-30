@@ -39,6 +39,15 @@ offset_top = -208.0
 offset_right = -331.0
 offset_bottom = 100.0
 
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
+text = "Novo jogo"
+
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1028226159]
+text = "Opções"
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
+text = "Créditos"
+
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
 visible = false
 theme_type_variation = &"RedButton"
@@ -57,6 +66,6 @@ offset_top = 624.0
 offset_right = 1261.0
 offset_bottom = 705.0
 theme_type_variation = &"RedButton"
-text = "Exit"
+text = "Sair"
 
 [connection signal="pressed" from="ExitButton2" to="." method="_on_exit_button_pressed"]

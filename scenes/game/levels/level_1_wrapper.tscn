@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dkh101xkcglna" path="res://CenaPrincipal/Cena_principal.tscn" id="2_0iml1"]
 [ext_resource type="Script" uid="uid://d2akx0tguog5q" path="res://scenes/game/scripts/tutorial_manager.gd" id="3_lxxyp"]
 [ext_resource type="PackedScene" uid="uid://rn0d4i4pggha" path="res://scenes/game/tutorials/tutorial_level1.tscn" id="4_gx0cf"]
-[ext_resource type="Texture2D" uid="uid://p020w7krna17" path="res://assets/tutorial_sprites/spr_celular.png" id="5_0iml1"]
+[ext_resource type="Texture2D" uid="uid://b5i5akwae2y68" path="res://assets/tutorial_sprites/spr_celular_alerta.png" id="5_0iml1"]
+[ext_resource type="PackedScene" uid="uid://cpyt4jpe24ldw" path="res://scenes/game/tutorials/tutorial_level1_2.tscn" id="5_lxxyp"]
 
 [node name="Level1Wrapper" type="Node" unique_id=756805623]
 script = ExtResource("1_gx0cf")
@@ -18,7 +19,7 @@ process_mode = 3
 [node name="TutorialManager" type="Node" parent="CanvasLayer" unique_id=949727534]
 unique_name_in_owner = true
 script = ExtResource("3_lxxyp")
-tutorial_scenes = Array[PackedScene]([ExtResource("4_gx0cf"), ExtResource("4_gx0cf")])
+tutorial_scenes = Array[PackedScene]([ExtResource("4_gx0cf"), ExtResource("5_lxxyp")])
 auto_open_delay = 0.0
 
 [node name="TutorialButton" type="Button" parent="CanvasLayer" unique_id=1637738528]

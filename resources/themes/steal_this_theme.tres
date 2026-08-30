@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dpksllq32v14s" path="res://resources/ui_elements/Red/Double/button_square_depth_gradient.png" id="5_2tktg"]
 [ext_resource type="Texture2D" uid="uid://rbk5grn8xyuv" path="res://resources/ui_elements/Red/Double/button_square_gradient.png" id="7_2tktg"]
 [ext_resource type="FontFile" uid="uid://5a6p1u65oh7f" path="res://resources/fonts/Kenney Pixel.ttf" id="7_m2x7j"]
+[ext_resource type="FontFile" uid="uid://dqg6byfcgvahh" path="res://resources/fonts/Poppins-Bold.ttf" id="8_bgrho"]
+[ext_resource type="FontVariation" uid="uid://diobiahouvosn" path="res://resources/fonts/Anton italico.tres" id="9_pd0to"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f31q"]
 bg_color = Color(0, 0, 0, 0)
@@ -504,6 +506,36 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oc7rp"]
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+expand_margin_left = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlgfo"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+expand_margin_left = 8.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llrxt"]
 bg_color = Color(0.051970966, 0.05197096, 0.05197095, 1)
 border_width_left = 3
@@ -726,8 +758,24 @@ Tree/styles/hovered = SubResource("StyleBoxFlat_bcw1c")
 Tree/styles/panel = SubResource("StyleBoxFlat_xi1kj")
 Tree/styles/selected = SubResource("StyleBoxFlat_rrcvo")
 Tree/styles/selected_focus = SubResource("StyleBoxFlat_wvge0")
+TutorialButton/base_type = &"Button"
+TutorialButton/colors/font_color = Color(0, 0, 0, 1)
+TutorialButton/colors/font_focus_color = Color(0, 0, 0, 1)
+TutorialButton/colors/font_hover_color = Color(0, 0, 0, 1)
+TutorialButton/styles/focus = SubResource("StyleBoxFlat_oc7rp")
+TutorialButton/styles/hover = SubResource("StyleBoxFlat_xlgfo")
+TutorialContent/base_type = &"MarginContainer"
+TutorialDescription/base_type = &"RichTextLabel"
+TutorialDescription/colors/default_color = Color(0, 0, 0, 1)
+TutorialDescription/fonts/normal_font = ExtResource("8_bgrho")
 TutorialPanel/base_type = &"PanelContainer"
 TutorialPanel/styles/panel = SubResource("StyleBoxFlat_llrxt")
+TutorialTitleLabel/base_type = &"Label"
+TutorialTitleLabel/colors/font_color = Color(0, 0, 0, 1)
+TutorialTitleLabel/colors/font_shadow_color = Color(0.89411765, 0.5294118, 0.7882353, 0.7882353)
+TutorialTitleLabel/constants/shadow_outline_size = 1
+TutorialTitleLabel/font_sizes/font_size = 16
+TutorialTitleLabel/fonts/font = ExtResource("9_pd0to")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_v0ggg")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_kvvmu")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_rum38")

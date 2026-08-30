@@ -1,38 +1,51 @@
 [gd_scene format=3 uid="uid://rn0d4i4pggha"]
 
 [ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_vd3dy"]
+[ext_resource type="Texture2D" uid="uid://jdntdnse05uu" path="res://resources/textures/Tutorial BackGround (2).png" id="2_kaqrc"]
 [ext_resource type="Texture2D" uid="uid://d0x7uw5cpojg" path="res://assets/tutorial_sprites/level_1_primeirotutorial.png" id="2_oma6h"]
 
 [node name="OverlaidWindow" unique_id=1876550858 instance=ExtResource("1_vd3dy")]
-custom_minimum_size = Vector2(420, 200)
+custom_minimum_size = Vector2(746, 402)
 offset_left = -209.99866
-offset_top = -162.49988
-offset_right = 210.00134
-offset_bottom = 162.50012
+offset_top = -234.24994
+offset_right = 536.00134
+offset_bottom = 167.75006
 theme_type_variation = &"TutorialPanel"
+exclusive_background_color = Color(0, 0, 0, 0.5019608)
 update_content = true
-title = "Classe Vs Objeto"
+title = "CLASSE VS OBJETO"
 text = "A [color=red]\"Classe\"[/color] é um molde o qual tem definido seus métodos e atributos, o ato de [color=purple] \"instanciar\"[/color] é pegar esse molde e transformá-lo em um [color=red]\"Objeto\"[/color] que vive dentro do progama.
 "
 close_button_text = "Next"
 
+[node name="TextureRect" type="TextureRect" parent="." index="0" unique_id=1929057763]
+layout_mode = 2
+texture = ExtResource("2_kaqrc")
+expand_mode = 1
+
 [node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(91647963) index="0" unique_id=1128241240]
-theme_override_font_sizes/font_size = 20
-text = "Classe Vs Objeto"
+theme_type_variation = &"TutorialTitleLabel"
+theme_override_font_sizes/font_size = 48
+text = "CLASSE VS OBJETO"
 
 [node name="HSeparator" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(91647963) index="1" unique_id=1241464319]
 visible = false
 
 [node name="TextureRect" type="TextureRect" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer" parent_id_path=PackedInt32Array(1110832264) index="0" unique_id=163746908]
-custom_minimum_size = Vector2(300, 105)
+custom_minimum_size = Vector2(400, 145)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_oma6h")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin/VBoxContainer" parent_id_path=PackedInt32Array(1110832264) index="1" unique_id=369403681]
+theme_type_variation = &"TutorialDescription"
+theme_override_font_sizes/normal_font_size = 20
 text = "A [color=red]\"Classe\"[/color] é um molde o qual tem definido seus métodos e atributos, o ato de [color=purple] \"instanciar\"[/color] é pegar esse molde e transformá-lo em um [color=red]\"Objeto\"[/color] que vive dentro do progama.
 "
 
 [node name="CloseButton" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(1139131565) index="0" unique_id=283447605]
+theme_type_variation = &"TutorialButton"
 text = "Next"
